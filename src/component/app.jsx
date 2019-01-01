@@ -20,7 +20,7 @@ export default class App extends Component {
 			<div>
 				<p>请输入你想搜索的项目库的关键字</p>
 				<Search addWord={this.addWord} />
-				{(keyword==='')? <div style={{display:'none'}}></div> : <List keyword={keyword} />}
+				<List keyword={keyword} />
 			</div>
 		)
 	}

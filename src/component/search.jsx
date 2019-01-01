@@ -9,6 +9,9 @@ export default class Search extends Component {
 
 	add = () => {
 		const kword = this.input.value;
+		if(!kword){
+			return;
+		}
 		this.props.addWord(kword);
 	}
 	
@@ -22,7 +25,7 @@ export default class Search extends Component {
 	}
 
 	onKeyDown = (e) => {
-		if(e.keyCode == 13){
+		if(e.keyCode === 13){
 			this.add();
 		}
 	}
